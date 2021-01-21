@@ -9,20 +9,20 @@ class Gogen < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "7a990fa9577e3cae2daf25f7e5c25e1a752ba70614e14f7f38ae24b56cf7da7b"
+    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "ad6fabac11bee3baa455e630a51a4cf6a720b23d37ea4890bcee32bf145d39b0"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "1127d9fd199919ae241ffcd78104378fcbaec7c9af047f0893b96708e7b1c061"
+    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "25328db67c0c978df03d05bd85e47e64938405992321e52854f435a3d9bcc0b6"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_armv6.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "7a54ad76f31b9d0be553bd5498b98013e5f749a3d586a49151a38a7518d4c331"
+    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_armv6.tar.gz", :using => CurlDownloadStrategy
+    sha256 "fab4b0148cfb520d2f9a6e1a50333a6a7321a800826c1a7bbe7a22e9ba58ec42"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_arm64.tar.gz", :using => CurlDownloadStrategy.
-    sha256 "497e74b95a9e70f458cce912211c8d99e2f29faffb8fc22f7d171adbc6f8a209"
+    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "413b4551991cee5720d83c59af0cc96a6533d46b4c8011ae49e30b66a184b4ea"
   end
 
   def install
