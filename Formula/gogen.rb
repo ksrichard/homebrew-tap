@@ -5,24 +5,24 @@
 class Gogen < Formula
   desc "Simple yet powerful dynamic project generation"
   homepage "https://github.com/ksrichard/gogen"
-  version "0.1"
+  version "0.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "ad6fabac11bee3baa455e630a51a4cf6a720b23d37ea4890bcee32bf145d39b0"
+    url "https://github.com/ksrichard/gogen/releases/download/0.2/gogen_0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "e6ab952497651df331d6341cd6f26033090afac176302c195c1c93f5aa84f6bb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "25328db67c0c978df03d05bd85e47e64938405992321e52854f435a3d9bcc0b6"
+    url "https://github.com/ksrichard/gogen/releases/download/0.2/gogen_0.2_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "00de22c05af88f8d11a53d69060043dad736ef5f24aed21bdeac06f9e27f4a35"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_armv6.tar.gz", :using => CurlDownloadStrategy
-    sha256 "fab4b0148cfb520d2f9a6e1a50333a6a7321a800826c1a7bbe7a22e9ba58ec42"
+    url "https://github.com/ksrichard/gogen/releases/download/0.2/gogen_0.2_Linux_armv6.tar.gz", :using => CurlDownloadStrategy
+    sha256 "6d174c35b8660e7bed47c8159c48e26717deac1da02d464d208ef6ae593b271b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ksrichard/gogen/releases/download/0.1/gogen_0.1_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "413b4551991cee5720d83c59af0cc96a6533d46b4c8011ae49e30b66a184b4ea"
+    url "https://github.com/ksrichard/gogen/releases/download/0.2/gogen_0.2_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "2c322902b4d446c08409832139c69d1e5272d164d267ebb9f5d51aab04e36c89"
   end
 
   def install
