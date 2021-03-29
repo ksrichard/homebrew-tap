@@ -5,24 +5,24 @@
 class Gocloud < Formula
   desc "Kick-start any cloud native project in your favourite programming language"
   homepage "https://github.com/ksrichard/gocloud"
-  version "0.1"
+  version "0.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ksrichard/gocloud/releases/download/0.1/gocloud_0.1_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "92af67362da4d0b525a4624e627a3f57178022e40e6af7f2ac28c3b160735c5e"
+    url "https://github.com/ksrichard/gocloud/releases/download/0.2/gocloud_0.2_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "0624940e53bc8410668cce745f183a87711601ac82e557f651567b98a5949e0f"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ksrichard/gocloud/releases/download/0.1/gocloud_0.1_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "381f5ae7938b0869bf794ede4d896777be2ce29fcda20fbe1654375b852a9290"
+    url "https://github.com/ksrichard/gocloud/releases/download/0.2/gocloud_0.2_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "1d4d523a4099d5947df8307c5199c324ff58fe95759b1dd54d78e7f81da94138"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/ksrichard/gocloud/releases/download/0.1/gocloud_0.1_Linux_armv6.tar.gz", :using => CurlDownloadStrategy
-    sha256 "24942c6b85dfc1a335f5659e397a8086b951bf83512f7ca0b1b90565749dcac5"
+    url "https://github.com/ksrichard/gocloud/releases/download/0.2/gocloud_0.2_Linux_armv6.tar.gz", :using => CurlDownloadStrategy
+    sha256 "6f3942ad0e33a4bcd51d10b0ebfb002f7b1b62761f2c7fdf899d076e856b453d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ksrichard/gocloud/releases/download/0.1/gocloud_0.1_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "4ca0d1898195e9f733870d14873c5073fa0c8b844730af4857e8ea49858f6075"
+    url "https://github.com/ksrichard/gocloud/releases/download/0.2/gocloud_0.2_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "5b1fd6064d62b8296507f1f67275b310a3bc20b04c5a448dbb7c1d889ec3b989"
   end
 
   def install
